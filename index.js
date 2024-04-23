@@ -14,6 +14,7 @@ window.analizarTexto = async () => {
   toxicity.load(umbral).then(model => {
     // Clasifica el texto ingresado por el usuario
     model.classify(textoUsuario).then(predictions => {
+      console.log(predictions)
       // Muestra los resultados en la página
       mostrarResultados(predictions);
     });
